@@ -230,3 +230,4 @@ C:\Programing\TestRepository\TestRepository\obj\Debug\net8.0\refint\TestReposito
 C:\Programing\TestRepository\TestRepository\obj\Debug\net8.0\TestRepository.pdb
 C:\Programing\TestRepository\TestRepository\obj\Debug\net8.0\TestRepository.genruntimeconfig.cache
 C:\Programing\TestRepository\TestRepository\obj\Debug\net8.0\ref\TestRepository.dll
+C:\Programing\TestRepository\TestRepository\obj\Debug\net8.0\TestRepository.sourcelink.json
