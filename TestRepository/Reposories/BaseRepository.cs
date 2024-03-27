@@ -25,19 +25,16 @@ public class BaseRepository<TEntity>(DbContext db):IRepository<TEntity> where TE
     public virtual async Task UpdateEntityFromExpression(TEntity entity)
     {
         _db.Set<TEntity>().Update(entity);
-        await _db.SaveChangesAsync();
     }
 
     public virtual  async Task CreateEntity(TEntity newEntity)
     {
         await _db.Set<TEntity>().AddAsync(newEntity);
-        await _db.SaveChangesAsync();
     }
 
     public virtual async Task RemoveEntityFromExpression(Expression<Func<TEntity, bool>> expression)
     {
         var entity = await GetEntityFromExpression(expression);
         db.Set<TEntity>().Remove(entity);
-        await db.SaveChangesAsync();
     }
 }

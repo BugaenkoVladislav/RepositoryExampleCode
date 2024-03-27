@@ -21,16 +21,19 @@ public class UserService(UnitOfWork unitOfWork)
     public async  Task CreateUser(UserDto userDto)
     {
         await _unit.UserRepository.CreateEntity(UserDtoMapper.ReturnUserFromDto(userDto));
+        await _unit.SaveAsync();
     }
     
     public async  Task DeleteUserByLogin(string login)
     {
         await _unit.UserRepository.RemoveEntityFromExpression(x=>x.Email == login);
+        await _unit.SaveAsync();
     }
     
     public async Task DeleteUserById(long id)
     {
         await _unit.UserRepository.RemoveEntityFromExpression(x=>x.Id == id);
+        await _unit.SaveAsync();
     }
     
 }
